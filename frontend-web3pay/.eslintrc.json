@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "plugins": ["check-file"],
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+    "react/no-children-prop": "warn",
+    "react-hooks/exhaustive-deps": "off",
+    "react/jsx-no-target-blank": "off",
+    "no-extra-boolean-cast": "off",
+    "prefer-const": "warn",
+    "check-file/filename-naming-convention": [
+      "warn",
+      { "**/*.{js,jsx,ts,tsx}": "KEBAB_CASE" },
+      { "ignoreMiddleExtensions": true }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": ["process"]
+      }
+    ]
+  }
+}
